@@ -3,6 +3,7 @@
  * file_stat - displays file informaion and path
  * @cmd:command entered by user to search file
  * @argv:pointer to path
+ *
  * Return: 0
  */
 void file_stat(char *cmd, char **argv)
