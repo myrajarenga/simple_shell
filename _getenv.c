@@ -8,7 +8,7 @@ char *_getenv(const char *name)
 {
 	char *str = NULL;
 	char *str_return = malloc(1024);
- 	char *env = NULL;
+	char *env = NULL;
 	int i = 0, j = 0, k = 0, p = 0;
 
 	while (environ[p] != NULL)
