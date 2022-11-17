@@ -3,7 +3,8 @@
  *tokenizer- accepts a string and string delimiter and breaks the  into
  * an array of words using strtok (only works for certain dilimiters)
  * @cmd:pointer delimetr to break strings
- *Return: An array of strings
+ *
+ * Return: An array of strings
  */
 char **tokenizer(char *cmd)
 {
