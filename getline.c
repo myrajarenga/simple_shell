@@ -10,7 +10,7 @@ char *_getline()
 	char *cmd = NULL;
 	size_t n;
 
-	printf("$ ");
+	printf("#cisfun$ ");
 	if (getline(&cmd, &n, stdin) == -1 || strcmp(cmd, "exit\n") == 0)
 
 	{
