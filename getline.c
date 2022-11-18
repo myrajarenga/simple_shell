@@ -11,9 +11,7 @@ char *_getline()
 	size_t n;
 
 	printf("#cisfun$ ");
-	if (getline(&cmd, &n, stdin) == -1)
-	/*|| strcmp(cmd, "exit\n") == 0)*/
-
+	if (getline(&cmd, &n, stdin) == -1 || strcmp(cmd, "exit\n") == 0)
 	{
 		free(cmd);
 		exit(0);
