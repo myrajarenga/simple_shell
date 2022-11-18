@@ -7,15 +7,27 @@
  */
 void exec(char **argv)
 {
+	char *cmd = NULL, *actual_cmd = NULL;
+
+	if (argv)
+	{
+		/*get the command*/
+		cmd = argv[0];
+ /* generate the path to this command before passing it to execve */
+	actual_cmd = get_location(cmd);
+	}
 
 	if (fork() == 0)
 	{
-		if (execve(argv[0], argv, environ) == -1)
+	/*execute the actual cmd with execv*/
+		if (execve(actual_cmd, argv, NULL) == -1)
+		{	
 			perror("");
+		}
 	}
 	else
 	{
 		wait(NULL);
-		_getline();
+		
 	}
 }

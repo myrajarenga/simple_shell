@@ -10,7 +10,8 @@
 
 extern char **environ;
 
-
+char *get_location(char *command);
+void looping_prompt(char *env[]);
 char *_getline();
 char **tokenizer(char *cmd);
 void exec(char **argv);
